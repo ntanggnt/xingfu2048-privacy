@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星符 2048 隐私政策</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f4ec;
+    --paper: #fffdf7;
+    --ink: #24211b;
+    --muted: #6e675b;
+    --line: #ddd3bf;
+    --gold: #a97a24;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151c;
+      --paper: #161d26;
+      --ink: #ece7dc;
+      --muted: #a7a094;
+      --line: #2c3743;
+      --gold: #d8ad5d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 16px 64px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 36px clamp(20px, 5vw, 48px);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: clamp(24px, 5vw, 32px);
+    letter-spacing: .02em;
+  }
+  .sub { margin: 0 0 28px; color: var(--muted); font-size: 14px; }
+  h2 {
+    margin: 32px 0 10px;
+    font-size: 19px;
+    color: var(--gold);
+  }
+  p, li { margin: 8px 0; }
+  ul { padding-left: 1.25em; }
+  li::marker { color: var(--gold); }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; }
+  .note {
+    margin: 18px 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--gold);
+    background: color-mix(in srgb, var(--gold) 7%, transparent);
+    color: var(--muted);
+  }
+  .contact { font-weight: 600; }
+  footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  @media print {
+    body { background: #fff; color: #000; padding: 0; }
+    main { border: 0; border-radius: 0; padding: 0; max-width: none; background: #fff; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>星符 2048 隐私政策</h1>
+  <p class="sub">适用于 Android 版《星符 2048》· 包名 <code>com.xingfu.rune2048</code><br>
+  生效日期：2026 年 11 月 18 日 · 版本：2.2.1</p>
+
+  <p>感谢你游玩《星符 2048》。本政策说明本应用如何处理与游戏相关的信息。当前版本是一款<strong>纯离线单机游戏</strong>：不要求注册账号，不接入广告、内购、统计分析或登录服务，也不申请网络权限。</p>
+
+  <div class="note">简单说：你的分数、设置和当前对局只保存在你自己的设备上；我们不会把它们上传到服务器，也没有服务器账户系统。</div>
+
+  <h2>1. 我们处理哪些信息</h2>
+  <p>本应用只在设备本地保存以下游戏数据，用于恢复进度和记住设置：</p>
+  <ul>
+    <li>各模式、各棋盘尺寸的最高分；</li>
+    <li>当前对局：棋盘数字、得分、步数、星币数量、道具状态；</li>
+    <li>设置：音乐音量、界面皮肤、上次选择的模式与棋盘尺寸；</li>
+    <li>新手教程是否已阅读。</li>
+  </ul>
+  <p>这些数据通过 Android 的 <code>SharedPreferences</code> 保存在应用私有目录中，受 Android 应用沙箱保护。它们不包含你的姓名、手机号、邮箱、通讯录、位置、照片、麦克风或摄像头内容。</p>
+
+  <h2>2. 系统备份说明</h2>
+  <p>本应用的 Android 清单中启用了系统备份（<code>android:allowBackup="true"</code>）。如果你在设备或系统账户中开启了云备份/换机备份，Android 系统或设备厂商可能会将应用数据备份到你的系统云账户，以便换机恢复。</p>
+  <p>该备份由操作系统或设备厂商控制，<strong>不是本应用主动上传</strong>。你可以在系统设置中关闭备份，或清除本应用数据来删除本地副本。</p>
+
+  <h2>3. 权限与网络</h2>
+  <p>当前版本：</p>
+  <ul>
+    <li>不申请网络权限（无 <code>INTERNET</code> 权限）；</li>
+    <li>不申请位置、通讯录、相机、麦克风、短信、通话记录或外部存储权限；</li>
+    <li>不读取设备标识符，不进行广告追踪；</li>
+    <li>音乐为安装包内的本地音频，仅通过设备扬声器/耳机播放，不录音。</li>
+  </ul>
+
+  <h2>4. 信息的使用、共享与披露</h2>
+  <p>本地游戏数据仅用于：显示分数、恢复对局、保存设置、播放对应皮肤的背景音乐。我们不会出售、出租、交易或向第三方共享这些数据。</p>
+  <p>当前版本未接入第三方 SDK（包括广告、统计、推送、崩溃上报、登录、支付或防沉迷 SDK）。如果未来版本接入联网服务，我们会在更新本政策并取得必要授权后再处理相关数据。</p>
+
+  <h2>5. 保存期限与删除</h2>
+  <p>本地数据会一直保留在设备上，直到你：</p>
+  <ul>
+    <li>在 Android 系统设置中清除本应用数据；或</li>
+    <li>卸载本应用。</li>
+  </ul>
+  <p>由于本应用没有账户系统，我们无法远程访问、导出或删除你设备上的本地数据；清除应用数据或卸载即可删除。</p>
+
+  <h2>6. 信息安全</h2>
+  <p>我们通过 Android 应用沙箱和系统权限机制保护本地数据。由于当前版本不进行网络传输，数据不存在被本应用上传到服务器的风险。请同时保护好自己的设备锁屏密码和系统备份账户。</p>
+
+  <h2>7. 未成年人保护</h2>
+  <p>本应用是数字益智游戏，不面向 8 岁以下儿童单独使用，不含广告、内购、社交聊天或用户生成内容。我们不会主动收集未成年人的个人信息。若监护人认为相关数据需要处理，可通过下方联系方式与我们联系。</p>
+
+  <h2>8. 第三方服务</h2>
+  <p>当前版本不包含第三方广告、统计、登录、支付、推送或社交分享服务。若未来接入 TapTap 防沉迷/实名认证或其他第三方服务，我们会更新本政策，说明第三方名称、处理的信息类型、目的和隐私政策链接。</p>
+
+  <h2>9. 政策更新</h2>
+  <p>当功能、权限或数据处理方式发生变化时，我们会更新本政策，并在本页面标注新的生效日期。重大变化会在应用更新说明或应用内以显著方式提示。</p>
+
+  <h2>10. 联系我们</h2>
+  <p>如对本政策或数据处理有疑问，请联系：</p>
+  <p class="contact">邮箱：anyanyway551@163.com</p>
+  <p>我们会在合理期限内回复。</p>
+
+  <footer>
+    星符 2048 开发团队 · 本页面为应用商店审核与用户查询使用的隐私政策页面。
+  </footer>
+</main>
+</body>
+</html>
